@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mapa Interativo | Além da Muralha</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/mapa.css">
+
+    <!-- Biblioteca Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""
+    >
+</head>
+
+<body>
+
+    <header>
+        <h1>Além da Muralha</h1>
+        <p>Descubra a China além das fronteiras.</p>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="mapa.html">Mapa Interativo</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="gastronomia.html">Gastronomia</a>
+            <a href="guia.html">Guia de Viagem</a>
+            <a href="contatos.html">Contatos</a>
+        </nav>
+    </header>
+
+    <main class="pagina-mapa">
+
+        <!-- APRESENTAÇÃO -->
+        <section class="apresentacao-mapa">
+
+            <span>EXPLORE A CHINA</span>
+
+            <h2>Uma China, infinitas descobertas.</h2>
+
+            <p>
+                Explore o território chinês, descubra cidades fascinantes
+                e encontre lugares que merecem fazer parte da sua próxima viagem.
+                Clique nos destinos e comece a explorar.
+            </p>
+
+        </section>
+
+        <!-- MAPA E LISTA DE CIDADES -->
+        <section class="mapa-layout">
+
+            <aside class="painel-cidades">
+
+                <div class="titulo-cidades">
+                    <span>SEU PRÓXIMO DESTINO</span>
+                    <h3>Explore as cidades</h3>
+                    <p>Selecione uma cidade para localizá-la no mapa.</p>
+                </div>
+
+                <div class="grade-cidades">
+
+                    <button class="cidade-opcao ativa" data-cidade="pequim">
+                        <span class="numero-cidade">01</span>
+                        <span>
+                            <strong>Pequim</strong>
+                            <small>História e tradição</small>
+                        </span>
+                        <span class="seta-cidade">↗</span>
+                    </button>
+
+                    <button class="cidade-opcao" data-cidade="xangai">
+                        <span class="numero-cidade">02</span>
+                        <span>
+                            <strong>Xangai</strong>
+                            <small>Modernidade e arquitetura</small>
+                        </span>
+                        <span class="seta-cidade">↗</span>
+                    </button>
+
+                    <button class="cidade-opcao" data-cidade="zhangjiajie">
+                        <span class="numero-cidade">03</span>
+                        <span>
+                            <strong>Zhangjiajie</strong>
+                            <small>Montanhas extraordinárias</small>
+                        </span>
+                        <span class="seta-cidade">↗</span>
+                    </button>
+
+                    <button class="cidade-opcao" data-cidade="xian">
+                        <span class="numero-cidade">04</span>
+                        <span>
+                            <strong>Xi'an</strong>
+                            <small>Arqueologia e impérios</small>
+                        </span>
+                        <span class="seta-cidade">↗</span>
+                    </button>
+
+                    <button class="cidade-opcao" data-cidade="chengdu">
+                        <span class="numero-cidade">05</span>
+                        <span>
+                            <strong>Chengdu</strong>
+                            <small>Pandas e gastronomia</small>
+                        </span>
+                        <span class="seta-cidade">↗</span>
+                    </button>
+
+                    <button class="cidade-opcao" data-cidade="guilin">
+                        <span class="numero-cidade">06</span>
+                        <span>
+                            <strong>Guilin</strong>
+                            <small>Paisagens naturais</small>
+                        </span>
+                        <span class="seta-cidade">↗</span>
+                    </button>
+
+                </div>
+
+                <div class="aviso-mapa">
+                    <span>✦</span>
+                    <p>
+                        Cada cidade guarda uma experiência diferente.
+                        Explore os marcadores e descubra a China.
+                    </p>
+                </div>
+
+            </aside>
+
+            <!-- ÁREA DO MAPA -->
+            <div class="coluna-mapa">
+
+                <div class="cabecalho-mapa">
+                    <div>
+                        <span>MAPA EXPLORATÓRIO</span>
+                        <h3>Descubra onde tudo acontece</h3>
+                    </div>
+
+                    <span class="selo-mapa">CHINA</span>
+                </div>
+
+                <div id="mapa-china"></div>
+
+                <p class="legenda-mapa">
+                    Use o mouse ou os dedos para movimentar e ampliar o mapa.
+                    Selecione os marcadores para conhecer cada destino.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- INFORMAÇÕES DO DESTINO -->
+        <section class="painel-detalhe" aria-live="polite">
+
+            <div class="detalhe-texto">
+
+                <span id="detalhe-regiao">DESTINO EM DESTAQUE</span>
+
+                <h2 id="detalhe-nome">Pequim</h2>
+
+                <p id="detalhe-descricao">
+                    Descubra a capital chinesa, onde a história imperial
+                    encontra uma das cidades mais importantes da Ásia.
+                </p>
+
+                <h3>O que conhecer?</h3>
+
+                <ul id="lista-atracoes">
+                    <li>Cidade Proibida</li>
+                    <li>Grande Muralha da China</li>
+                    <li>Templo do Céu</li>
+                </ul>
+
+                <a href="destinos.html" class="link-destinos">
+                    Explorar guia de destinos →
+                </a>
+
+            </div>
+
+            <div class="selo-detalhe">
+                <span>ALÉM DA</span>
+                <strong>MURALHA</strong>
+                <small>Descubra novos horizontes</small>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Além da Muralha - 2026</p>
+    </footer>
+
+    <!-- Biblioteca Leaflet -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+    ></script>
+
+    <!-- Nosso JavaScript -->
+    <script src="JS/mapa.js"></script>
+
+</body>
+</html>

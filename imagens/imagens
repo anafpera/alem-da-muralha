@@ -1,0 +1,16 @@
+além_da_muralha/
+│
+├── CSS/
+│   └── style.css
+│
+├── imagens/
+│   ├── muralha.jpg
+│   ├── destinos.jpg
+│   ├── cultura.jpg
+│   └── gastronomia.jpg
+│
+├── contatos.html
+├── cultura.html
+├── destinos.html
+├── gastronomia.html
+└── index.html

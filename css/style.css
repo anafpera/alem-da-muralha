@@ -1,0 +1,1151 @@
+
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F6F0E5;
+    font-family: Arial, sans-serif;
+    color: #292522;
+}
+
+main {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2, h3 {
+    font-family: Georgia, serif;
+}
+
+p {
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   2. CABEÇALHO E NAVEGAÇÃO
+========================================= */
+
+header {
+    background-color: #8F2028;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 35px 20px 25px;
+    border-bottom: 4px solid #D6B56D;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    letter-spacing: 1px;
+    margin: 0 0 10px;
+}
+
+header p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: 0 0 28px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 14px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #D6B56D;
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+
+/* =========================================
+   3. APRESENTAÇÃO DA HOME
+========================================= */
+
+.apresentacao {
+    max-width: 900px;
+    margin: 45px auto;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.apresentacao h2 {
+    color: #8F2028;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.apresentacao p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #514943;
+}
+
+
+/* =========================================
+   4. BANNER PRINCIPAL DA HOME
+========================================= */
+
+.banner {
+    position: relative;
+    width: 90%;
+    margin: 35px auto 55px;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.70),
+        transparent 75%
+    );
+}
+
+.texto-banner {
+    position: absolute;
+    z-index: 1;
+    bottom: 35px;
+    left: 40px;
+    color: white;
+    max-width: 550px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.texto-banner h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.texto-banner p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   5. CONTEÚDOS EM DESTAQUE
+========================================= */
+
+.destaques {
+    width: 90%;
+    margin: 60px auto;
+}
+
+.destaques h2 {
+    color: #8F2028;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.container-cards {
+    display: flex;
+    gap: 25px;
+}
+
+.card {
+    flex: 1;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    color: #292522;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.card h3 {
+    color: #8F2028;
+    font-size: 22px;
+    margin: 20px 10px 10px;
+}
+
+.card p {
+    padding: 0 15px;
+    font-size: 14px;
+    color: #625A53;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   6. INTRODUÇÕES DAS PÁGINAS INTERNAS
+========================================= */
+
+.introducao-destinos,
+.introducao-cultura,
+.introducao-gastronomia,
+.introducao-contatos {
+    width: 80%;
+    max-width: 900px;
+    margin: 45px auto;
+    text-align: center;
+}
+
+.introducao-destinos h2,
+.introducao-cultura h2,
+.introducao-gastronomia h2,
+.introducao-contatos h2 {
+    color: #8F2028;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.introducao-destinos p,
+.introducao-cultura p,
+.introducao-gastronomia p,
+.introducao-contatos p {
+    line-height: 1.8;
+    color: #514943;
+}
+
+
+/* =========================================
+   7. DESTINOS, CULTURA E GASTRONOMIA
+========================================= */
+
+.lista-destinos,
+.conteudos-culturais,
+.conteudos-gastronomia {
+    width: 85%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.destino,
+.cultura-card,
+.gastronomia-card {
+    display: flex;
+    background-color: #FFFFFF;
+    margin-bottom: 35px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destino:hover,
+.cultura-card:hover,
+.gastronomia-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 22px rgba(0, 0, 0, 0.12);
+}
+
+.destino img,
+.cultura-card img,
+.gastronomia-card img {
+    width: 40%;
+    min-height: 240px;
+    object-fit: cover;
+}
+
+.destino div,
+.cultura-card div,
+.gastronomia-card div {
+    flex: 1;
+    padding: 25px 30px;
+}
+
+.destino h2,
+.cultura-card h2,
+.gastronomia-card h2 {
+    color: #8F2028;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.destino p,
+.cultura-card p,
+.gastronomia-card p {
+    line-height: 1.8;
+    color: #514943;
+}
+
+
+/* =========================================
+   8. FORMULÁRIO DE CONTATO
+========================================= */
+
+.formulario-contato {
+    background-color: #FFFFFF;
+    width: 60%;
+    max-width: 700px;
+    margin: 35px auto 55px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.formulario-contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contato label {
+    margin-bottom: 9px;
+    font-weight: bold;
+    color: #8F2028;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 22px;
+    border: 1px solid #D6B56D;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #FFFEFC;
+}
+
+.formulario-contato input:focus,
+.formulario-contato textarea:focus {
+    outline: none;
+    border-color: #8F2028;
+    box-shadow: 0 0 5px rgba(143, 32, 40, 0.2);
+}
+
+.formulario-contato textarea {
+    resize: vertical;
+}
+
+.formulario-contato button {
+    background-color: #8F2028;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-contato button:hover {
+    background-color: #6E171E;
+}
+
+
+/* =========================================
+   9. RODAPÉ
+========================================= */
+
+footer {
+    background-color: #292522;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 22px;
+    margin-top: 50px;
+    border-top: 3px solid #D6B56D;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   10. GUIA DE VIAGEM
+========================================= */
+
+.introducao-guia {
+    max-width: 1050px;
+    margin: 65px auto 75px;
+    padding: 65px 55px;
+    text-align: center;
+    background: linear-gradient(135deg, #fffaf1, #f1e5d3);
+    border-radius: 4px;
+    border-top: 4px solid #8F2028;
+}
+
+.introducao-guia::before {
+    content: "CHINA • CULTURA • EXPERIÊNCIAS";
+    display: block;
+    color: #A9874D;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.introducao-guia h2 {
+    color: #762027;
+    font-family: Georgia, serif;
+    font-size: 43px;
+    font-weight: normal;
+    margin-bottom: 22px;
+}
+
+.introducao-guia p {
+    max-width: 760px;
+    margin: auto;
+    line-height: 2;
+    color: #62574D;
+    font-size: 16px;
+}
+
+.secao-guia {
+    width: 90%;
+    max-width: 1200px;
+    margin: 85px auto;
+}
+
+.secao-guia > h2 {
+    color: #762027;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.secao-guia > h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 2px;
+    background: #C5A15D;
+    margin: 18px auto 0;
+}
+
+.descricao-secao {
+    max-width: 760px;
+    margin: 22px auto 42px;
+    text-align: center;
+    line-height: 1.9;
+    color: #75695F;
+    font-size: 15px;
+}
+
+.grade-guia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+.guia-card {
+    background: #FFFFFF;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(57, 37, 24, 0.09);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border: 1px solid #eee5d9;
+}
+
+.guia-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 16px 35px rgba(57, 37, 24, 0.16);
+}
+
+.guia-card img {
+    display: block;
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.guia-card:hover img {
+    transform: scale(1.05);
+}
+
+.conteudo-card-guia {
+    padding: 26px 25px 30px;
+}
+
+.guia-card h3 {
+    color: #762027;
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: normal;
+    line-height: 1.35;
+    margin: 16px 0 13px;
+}
+
+.guia-card p {
+    color: #62574D;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.categoria-guia {
+    display: inline-block;
+    color: #98733E;
+    background: #F7F0E5;
+    padding: 7px 13px;
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   11. TABELA DE CUSTOS
+========================================= */
+
+.tabela-custos {
+    max-width: 900px;
+    margin: 40px auto 25px;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(57, 37, 24, 0.08);
+    border: 1px solid #eee5d9;
+}
+
+.tabela-custos table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-custos th {
+    background: #81232A;
+    color: white;
+    padding: 21px 24px;
+    text-align: left;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.tabela-custos td {
+    padding: 20px 24px;
+    color: #514943;
+    font-size: 14px;
+    line-height: 1.6;
+    border-bottom: 1px solid #EEE7DC;
+}
+
+.tabela-custos td:first-child {
+    color: #81232A;
+    font-weight: bold;
+    width: 28%;
+}
+
+.tabela-custos tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela-custos tbody tr:nth-child(even) {
+    background: #FBF8F2;
+}
+
+.tabela-custos tbody tr:hover {
+    background: #F4EBDD;
+}
+
+.aviso-precos {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 18px 25px;
+    background: #F7F0E5;
+    border-left: 3px solid #C5A15D;
+    color: #75695F;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   12. CALCULADORA DE VIAGEM
+========================================= */
+
+.calculadora-viagem {
+    width: 90%;
+    max-width: 1100px;
+    margin: 90px auto;
+    padding: 55px;
+    background: linear-gradient(145deg, #FBF7EF, #F1E6D6);
+    border-top: 4px solid #8F2028;
+    border-radius: 5px;
+    box-shadow: 0 10px 35px rgba(57, 37, 24, 0.08);
+}
+
+.cabecalho-calculadora {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.cabecalho-calculadora h2 {
+    color: #762027;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.cabecalho-calculadora p {
+    color: #75695F;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.campos-calculadora {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.campo-calculadora {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.campo-calculadora label {
+    color: #514943;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.campo-calculadora input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #DED2C2;
+    border-radius: 4px;
+    background: #FFFFFF;
+    color: #403630;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+.campo-calculadora input:focus {
+    border-color: #8F2028;
+    box-shadow: 0 0 0 3px rgba(143, 32, 40, 0.10);
+}
+
+.botao-calcular {
+    display: block;
+    width: 100%;
+    margin: 30px 0;
+    padding: 17px;
+    border: none;
+    border-radius: 4px;
+    background: #8F2028;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.botao-calcular:hover {
+    background: #6E1820;
+    transform: translateY(-2px);
+}
+
+.resultado-calculadora {
+    margin-top: 35px;
+    padding: 35px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #E8DFD0;
+    box-shadow: 0 8px 25px rgba(57, 37, 24, 0.07);
+}
+
+.resultado-calculadora > span {
+    display: block;
+    color: #98733E;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.resultado-calculadora h3 {
+    color: #762027;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: normal;
+    margin: 12px 0 25px;
+}
+
+.detalhes-resultado {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.detalhes-resultado div {
+    padding: 20px;
+    background: #F8F3EB;
+    border-left: 3px solid #C5A15D;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detalhes-resultado span {
+    color: #75695F;
+    font-size: 13px;
+}
+
+.detalhes-resultado strong {
+    color: #762027;
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+.resumo-gastos {
+    border-top: 1px solid #EEE7DC;
+    padding-top: 20px;
+}
+
+.resumo-gastos h4 {
+    color: #762027;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.resumo-gastos p {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #EEE7DC;
+    color: #62574D;
+    font-size: 14px;
+}
+
+.resultado-calculadora small {
+    display: block;
+    margin-top: 25px;
+    color: #75695F;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   13. BANNER CINEMATOGRÁFICO 
+========================================= */
+
+.banner-guia {
+    width: 100%;
+    min-height: 590px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 12, 11, 0.82),
+            rgba(15, 12, 11, 0.30),
+            rgba(15, 12, 11, 0.10)
+        ),
+        linear-gradient(
+            0deg,
+            rgba(15, 12, 11, 0.45),
+            transparent 60%
+        ),
+        url("../imagens/muralha.jpg");
+
+    background-size: cover;
+    background-position: center 48%;
+    background-repeat: no-repeat;
+}
+
+.banner-guia::after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    pointer-events: none;
+}
+
+.conteudo-banner-guia {
+    width: 85%;
+    max-width: 1150px;
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 80px 0;
+    margin: 0 auto;
+    animation: entradaBanner 1.2s ease;
+}
+
+.conteudo-banner-guia > span {
+    display: block;
+    color: #E4C27D;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.conteudo-banner-guia h2 {
+    max-width: 750px;
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: normal;
+    line-height: 1.12;
+    margin: 0 0 25px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.35);
+}
+
+.conteudo-banner-guia p {
+    max-width: 590px;
+    color: #F4EDE3;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.botao-banner-guia {
+    display: inline-block;
+    padding: 16px 28px;
+    background: #8F2028;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    border: 1px solid #8F2028;
+    transition: 0.3s ease;
+}
+
+.botao-banner-guia:hover {
+    background: #D6B56D;
+    border-color: #D6B56D;
+    color: #292522;
+    transform: translateY(-3px);
+}
+
+.indicador-banner {
+    position: absolute;
+    z-index: 2;
+    bottom: 38px;
+    right: 8%;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+@keyframes entradaBanner {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   14. RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .container-cards {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 45%;
+    }
+
+    .formulario-contato {
+        width: 80%;
+    }
+
+    .banner img {
+        height: 380px;
+    }
+
+    .grade-guia {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .introducao-guia {
+        margin: 45px auto;
+        padding: 50px 30px;
+    }
+
+    .introducao-guia h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 25px 12px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 9px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .apresentacao,
+    .introducao-destinos,
+    .introducao-cultura,
+    .introducao-gastronomia,
+    .introducao-contatos {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    .apresentacao h2,
+    .introducao-destinos h2,
+    .introducao-cultura h2,
+    .introducao-gastronomia h2,
+    .introducao-contatos h2 {
+        font-size: 26px;
+    }
+
+    .banner {
+        width: 100%;
+        margin: 25px auto;
+    }
+
+    .banner img {
+        height: 300px;
+    }
+
+    .texto-banner {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .texto-banner h2 {
+        font-size: 28px;
+    }
+
+    .texto-banner p {
+        font-size: 14px;
+    }
+
+    .destaques {
+        width: 95%;
+    }
+
+    .container-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .lista-destinos,
+    .conteudos-culturais,
+    .conteudos-gastronomia {
+        width: 95%;
+    }
+
+    .destino,
+    .cultura-card,
+    .gastronomia-card {
+        flex-direction: column;
+    }
+
+    .destino img,
+    .cultura-card img,
+    .gastronomia-card img {
+        width: 100%;
+        height: 220px;
+        min-height: 0;
+    }
+
+    .destino div,
+    .cultura-card div,
+    .gastronomia-card div {
+        padding: 20px;
+    }
+
+    .formulario-contato {
+        width: 95%;
+        padding: 22px;
+    }
+
+    .grade-guia {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-guia {
+        width: 92%;
+        margin: 60px auto;
+    }
+
+    .secao-guia > h2 {
+        font-size: 28px;
+    }
+
+    .introducao-guia {
+        width: 92%;
+        padding: 40px 22px;
+    }
+
+    .introducao-guia h2 {
+        font-size: 29px;
+    }
+
+    .introducao-guia p {
+        font-size: 14px;
+    }
+
+    .guia-card img {
+        height: 230px;
+    }
+
+    .tabela-custos th,
+    .tabela-custos td {
+        padding: 13px 10px;
+        font-size: 12px;
+    }
+
+    .tabela-custos td:first-child {
+        width: 32%;
+    }
+
+    .calculadora-viagem {
+        width: 94%;
+        padding: 30px 18px;
+        margin: 60px auto;
+    }
+
+    .cabecalho-calculadora h2 {
+        font-size: 28px;
+    }
+
+    .campos-calculadora {
+        grid-template-columns: 1fr;
+    }
+
+    .resultado-calculadora {
+        padding: 22px 16px;
+    }
+
+    .resultado-calculadora h3 {
+        font-size: 30px;
+    }
+
+    .detalhes-resultado {
+        grid-template-columns: 1fr;
+    }
+
+    .detalhes-resultado strong {
+        font-size: 19px;
+    }
+
+    .resumo-gastos p {
+        font-size: 12px;
+    }
+
+    .banner-guia {
+        min-height: 520px;
+        background-position: center;
+    }
+
+    .banner-guia::after {
+        inset: 10px;
+    }
+
+    .conteudo-banner-guia {
+        width: 82%;
+        padding: 60px 0;
+    }
+
+    .conteudo-banner-guia h2 {
+        font-size: 43px;
+    }
+
+    .conteudo-banner-guia p {
+        font-size: 14px;
+    }
+
+    .indicador-banner {
+        right: 10%;
+        bottom: 25px;
+        font-size: 9px;
+    }
+}
